@@ -1,0 +1,224 @@
+/* general styles */
+:root {
+  /* colors */
+  --main-color: #2dad75;
+  --secondary-color: #35795c;
+  --bg-color: #0e472f;
+  /* fonts */
+  --main-font: "Poppins", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
+  --max-width: 1200px;
+  --min-width: 300px;
+  --header-height: 60px;
+  --section-padding: 20px;
+  --border-radius: 5px;
+  --box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  --box-shadow-active: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  --box-shadow-inset: inset 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-inset-hover: inset 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  --box-shadow-inset-active: inset 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  --main-transition: 0.3s;
+  --transition: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../assets/images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+section {
+  padding: var(--section-padding);
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* end of general styles */
+
+/* start of header */
+
+.header {
+  display: inline-block;
+  margin: 2rem 0 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text {
+  color: var(--main-color);
+  width: 100%;
+  margin: auto;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  /* background-color: red; */
+  animation: typing 5s steps(28), cursor 0.5s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+/* end of header */
+
+/* start of main */
+
+/* start of model  */
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.form-group-input {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-group .form-group-input label {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.form-group .form-group-input input {
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transition: var(--transition);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.form-group .form-group-input input:hover {
+  border: 1px solid var(--secondary-color);
+  transition: var(--transition);
+  box-shadow: var(--box-shadow-inset);
+  background-color: var(--secondary-color);
+}
+
+.btn {
+  width: fit-content;
+  margin: 0 auto;
+  color: white;
+  background-color: var(--bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow-hover);
+  transition: var(--transition);
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-right video {
+  max-width: 500px;
+}
+
+.container-right canvas {
+  display: none;
+}
+
+.container-right a {
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  color: white;
+  background-color: var(--bg-color);
+}
+
+/* end of model */
+
+/* start of result */
+
+.result-container p {
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* end of result */
+
+/* end of main */

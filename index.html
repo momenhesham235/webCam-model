@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVP Model</title>
+    <link rel="icon" href="./assets/images/icons.svg" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- start of main -->
+    <main>
+      <!-- start of Header  -->
+      <section class="header">
+        <h1 class="text">Ecomate Trash Classification</h1>
+        <h2>choose alternative</h2>
+      </section>
+      <!-- end of Header -->
+
+      <!-- start of model -->
+      <section>
+        <div class="container">
+          <!-- Upload an image -->
+          <div class="row">
+            <div class="container-left">
+              <h3>Upload an image</h3>
+              <form id="upload-form" class="form-group">
+                <div class="form-group-input">
+                  <label for="file">Select an image:</label>
+                  <input
+                    type="file"
+                    id="file"
+                    name="file"
+                    accept="image/*"
+                    required
+                  />
+                </div>
+                <button type="submit" id="predict-button" class="btn">
+                  <i class="fa-solid fa-question"></i>
+                  Predict
+                </button>
+              </form>
+            </div>
+
+            <!-- Camera Feed -->
+            <div class="container-right">
+              <h3>Camera Feed</h3>
+              <video id="webcam" autoplay playsinline></video>
+
+              <canvas id="canvas"></canvas>
+
+              <a download onclick="takePicture()">
+                <i class="fa-solid fa-camera-retro"></i>
+                SNAP
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- end of model -->
+
+      <!-- start of result -->
+      <section>
+        <div class="container">
+          <div id="result-container" class="result-container">
+            <p>result <i class="fa-solid fa-arrow-right"></i></p>
+            <div id="result"></div>
+          </div>
+        </div>
+      </section>
+      <!-- end of result -->
+    </main>
+    <!-- end of main -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -4,8 +4,12 @@ const webCamElement = document.getElementById("webcam");
 const canvasElement = document.getElementById("canvas");
 
 const constraints = {
-  video: true,
-  facingMode: "externally",
+  video: {
+    facingMode: {
+      exact: "environment",
+      ideal: "user",
+    },
+  },
 };
 
 const webcam = new Webcam(webCamElement, constraints, canvasElement);

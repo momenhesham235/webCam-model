@@ -4,10 +4,10 @@ const webCamElement = document.getElementById("webcam");
 const canvasElement = document.getElementById("canvas");
 
 const constraints = {
-  video: {
-    facingMode: {
-      exact: "environment",
-      ideal: "environment",
+  navigator: {
+    getUserMedia: {
+      video: true,
+      facingMode: "environment",
     },
   },
 };

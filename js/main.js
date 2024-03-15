@@ -4,12 +4,9 @@ const webCamElement = document.getElementById("webcam");
 const canvasElement = document.getElementById("canvas");
 
 const constraints = {
-  navigator: {
-    getUserMedia: {
-      video: true,
-      facingMode: "environment",
-    },
-  },
+  audio: false,
+  video: true,
+  facingMode: "environment",
 };
 
 const webcam = new Webcam(webCamElement, constraints, canvasElement);
@@ -21,10 +18,10 @@ webcam.onSuccess = () => {
 function cameraFlip() {
   console.log("flip");
   webcam.flip();
+  webcam.start();
 }
 
 webcam.start();
-
 function takePicture() {
   let picture = webcam.snap();
   document.querySelector("a").href = picture;

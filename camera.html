@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <meta name="keywords" content="camera , webcam , image , upload" />
+    <meta name="author" content="Ecomate Team" />
+
     <title>MVP Model</title>
+    <!-- styles -->
     <link rel="icon" href="./assets/images/icons.svg" />
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/pages/camera.css" />
     <link rel="stylesheet" href="./css/media.css" />
-
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"
-    ></script>
+    <!-- webcam js -->
+    <script src="./js/webcam-easy.min.js"></script>
   </head>
   <body>
     <!-- start of main -->
@@ -24,32 +28,29 @@
       </section>
       <!-- end of Header -->
 
-      <!-- start of model -->
+      <!--  Take a Picture From Camera Start -->
       <section>
         <div class="container">
-          <!-- Upload an image -->
           <div class="row">
-            <!-- Camera Feed -->
-            <div class="container-right">
+            <!-- Camera Feed Start -->
+            <div class="camera-feed">
               <h3>Camera Feed</h3>
               <video id="webcam" autoplay playsinline></video>
-
               <canvas id="canvas"></canvas>
-
-              <div>
+              <div class="controls">
                 <a download onclick="takePicture()">
                   SNAP
                   <i class="fa-solid fa-camera-retro"></i>
                 </a>
-
                 <button onclick="cameraFlip()">flip</button>
               </div>
             </div>
+            <!-- Camera Feed End -->
           </div>
         </div>
       </section>
 
-      <!-- end of model -->
+      <!-- Take a Picture From Camera End  -->
 
       <!-- start of result -->
       <section>

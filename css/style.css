@@ -1,4 +1,4 @@
-/* general styles */
+/* Global Styles Start */
 :root {
   /* colors */
   --main-color: #2dad75;
@@ -66,6 +66,21 @@ h3 {
 
 a {
   text-decoration: none;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  color: white;
+  background-color: var(--bg-color);
+}
+
+a:hover {
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow-hover);
+  transition: var(--transition);
 }
 
 .container {
@@ -73,9 +88,9 @@ a {
   margin: 0 auto;
 }
 
-/* end of general styles */
+/* Global Styles End */
 
-/* start of header */
+/* Header Start */
 
 .header {
   display: inline-block;
@@ -94,7 +109,6 @@ a {
   border-right: 2px solid;
   white-space: nowrap;
   overflow: hidden;
-  /* background-color: red; */
   animation: typing 5s steps(28), cursor 0.5s step-end infinite alternate;
 }
 
@@ -110,108 +124,7 @@ a {
   }
 }
 
-/* end of header */
-
-/* start of main */
-
-/* start of model  */
-
-.row {
-  display: flex;
-  justify-content: space-around;
-}
-
-.container-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.form-group-input {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 1rem;
-}
-
-.form-group .form-group-input label {
-  color: white;
-  font-size: 1.2rem;
-}
-
-.form-group .form-group-input input {
-  padding: 0.5rem;
-  border-radius: var(--border-radius);
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  transition: var(--transition);
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
-}
-
-.form-group .form-group-input input:hover {
-  border: 1px solid var(--secondary-color);
-  transition: var(--transition);
-  box-shadow: var(--box-shadow-inset);
-  background-color: var(--secondary-color);
-}
-
-.btn {
-  width: fit-content;
-  margin: 0 auto;
-  color: white;
-  background-color: var(--bg-color);
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: var(--transition);
-}
-
-.btn:hover {
-  background-color: var(--secondary-color);
-  box-shadow: var(--box-shadow-hover);
-  transition: var(--transition);
-}
-
-.container-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.container-right video {
-  max-width: 500px;
-}
-
-.container-right canvas {
-  display: none;
-}
-
-.container-right a {
-  padding: 10px;
-  border-radius: var(--border-radius);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: var(--transition);
-  color: white;
-  background-color: var(--bg-color);
-}
-
-/* end of model */
+/* Header End */
 
 /* start of result */
 
@@ -223,25 +136,4 @@ a {
   text-align: center;
 }
 
-button {
-  padding: 10px;
-  border-radius: var(--border-radius);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: var(--transition);
-  color: white;
-  background-color: var(--bg-color);
-  margin-inline: 1rem;
-  text-transform: capitalize;
-}
-
-button:hover {
-  background-color: var(--secondary-color);
-  box-shadow: var(--box-shadow-hover);
-  transition: var(--transition);
-}
 /* end of result */
-
-/* end of main */

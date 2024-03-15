@@ -1,0 +1,33 @@
+.camera-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camera-feed video {
+  max-width: 500px;
+}
+
+.camera-feed canvas {
+  display: none;
+}
+
+.camera-feed .controls button {
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: var(--transition);
+  color: white;
+  background-color: var(--bg-color);
+  margin-inline: 1rem;
+}
+
+.camera-feed .controls button:hover {
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow-hover);
+  transition: var(--transition);
+}
+

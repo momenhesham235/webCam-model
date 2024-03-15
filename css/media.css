@@ -53,7 +53,7 @@
 /* video media */
 
 @media (max-width: 768px) {
-  .container-right video {
+  .camera-feed video {
     max-width: 300px;
     height: 200px;
   }
